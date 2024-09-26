@@ -42,7 +42,7 @@ function App() {
     }
   };
   const getCurrentWeatherByLocation = async (lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lan=fr&appid=c9792bc12eb95e4185894e1f54c03eb5&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lan=fr&appid=${REACT_APP_API_KEY}&units=metric`;
     setLoading(true);
     let response = await fetch(url);
     let data = await response.json();
@@ -51,7 +51,7 @@ function App() {
     setLoading(false);
   };
   const getWeatherByCity = async (city) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lan=kr&appid=c9792bc12eb95e4185894e1f54c03eb5&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lan=kr&appid=${REACT_APP_API_KEY}&units=metric`;
     setLoading(true);
     let response = await fetch(url);
     let data = await response.json();
@@ -61,7 +61,7 @@ function App() {
     console.log('render');
   };
   const getCurrentAirPollution = async (lat, lon) => {
-    let url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=c9792bc12eb95e4185894e1f54c03eb5&units=metric`;
+    let url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${REACT_APP_API_KEY}&units=metric`;
     let response = await fetch(url);
     let data = await response.json();
     console.log('air pollution?', data);
