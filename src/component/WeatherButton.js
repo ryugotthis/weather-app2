@@ -1,6 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
-import { FaMap } from 'react-icons/fa';
 import { BsPinMapFill } from 'react-icons/bs';
 const WeatherButton = ({ cityArray, setCity, city }) => {
   return (
