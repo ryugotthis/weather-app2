@@ -12,6 +12,7 @@ const InformationBox = ({ weatherData }) => {
                 ? `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`
                 : ''
             }
+            alt="weather icon"
           />
           <p>{weatherData?.weather[0].description}</p>
         </div>
